@@ -18,19 +18,53 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
-    <style>
-      body{
-        background-image: url("img/lomito.jpg");
-        background-position: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
   </head>
   <body>
 
 
+<!-- barra de navegacion -->
+<div class="container-fluid bg-white p-3  border-info border-2 border-bottom">
+  <div class="row">
+    
+    <div class="col-1 mx-3">
+      <img src="img/angie.png"  class="img-fluid w-50" alt="">
+    </div>
 
-<div class="container bg-white mt-5 p-5">
-  <div class="row border p-3 justify-content-center">
+    <div class="col-2">
+      <a href="tabla_contratistas.html">Perfil contratistas</a>
+    </div>
+
+    <div class="col-2">
+      <a href="contratistas.html">seccion admin contratistas</a>
+    </div>
+
+
+  </div>
+</div>
+<!-- barra de navegacion -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container bg-white mt-5 p-5 sombra-contenedor">
+
+  <div class="row border p-3 justify-content-center sombra-encabezados">
     <div class="col-12 text-center">
       <h4>CONTRATISTAS: NOMBRE_EMPRESA</h4>
     </div>
@@ -40,11 +74,10 @@
         VER SUA
       </button>
     </div>
-
   </div>
 
 
-  <div class="row border mt-3 p-3">
+  <div class="row border mt-3 p-3 sombra-encabezados">
     <div class="col-auto">
       <input type="search" class="form-control" autofocus>
     </div>
@@ -57,14 +90,9 @@
   </div>
 
 
-  <div class="row justify-content-center mt-3">
-
-    
-    <div class="col-12 shadow shadow-sm p-3 border">
 
 
-      <div class="row justify-content-around">
-
+  <div class="row justify-content-center mt-4 border p-3 sombra-filas">
 
         <div class="col-sm-6 col-md-6  col-lg-3 ">
           <b>Nombre: </b> <br>
@@ -90,7 +118,7 @@
 
         <div class="col-sm-12 col-md-6 col-lg-1 text-center">
           <small class="fw-bold">ELIMINAR:</small> <br> 
-          <a href="#" class="btn btn-danger btn-sm  w-100 p-1">
+          <a href="#" class="btn btn-danger btn-sm  w-100 p-1" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#eliminar">
           <i class="fa fa-eraser mx-2"></i>
           </a>
         </div>
@@ -103,11 +131,8 @@
         </div>
 
 
-      </div>
-    </div>
-
-
   </div>
+
 
 
 
@@ -122,40 +147,67 @@
 
 
 
-
+<!-- AQUI ESTAN TODOS LOS MODALES -->
 <div class="container">
   <div class="row">
-
-
     
-<!-- Modal autorizar entrada trabajador trabajador -->
-<div class="modal fade" id="autorizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">¿AUTORIZAR ENTRADA AL TRABAJADOR?</h5>
-        <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body border text-center">
-        <img src="https://media1.tenor.com/m/p3WnkFSc7ZsAAAAC/norbert-dog-high-five.gif" style="display: none;" id="imagen" class="img-fluid" alt="">
-        <br><br>
-        <button type="button" class="btn btn-primary w-100" data-mdb-ripple-init data-mdb-dismiss="modal" >CANCELAR</button>
-        
-        <button type="button" class="btn btn-success w-100 mt-3" id="confirma" data-mdb-ripple-init >CONFIRMAR</button>
+
+    <!-- Modal autorizar entrada trabajador trabajador -->
+    <div class="modal fade" id="autorizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿AUTORIZAR ENTRADA AL TRABAJADOR?</h5>
+            <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body border text-center">
+            <img src="https://media1.tenor.com/m/p3WnkFSc7ZsAAAAC/norbert-dog-high-five.gif" style="display: none;" id="imagen" class="img-fluid" alt="">
+            <br><br>
+            <button type="button" class="btn btn-primary w-100" data-mdb-ripple-init data-mdb-dismiss="modal" >CANCELAR</button>
+            
+            <button type="button" class="btn btn-success w-100 mt-3" id="confirma" data-mdb-ripple-init >CONFIRMAR</button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Modal autorizar entrada trabajador trabajador -->
+
+
+
+
+    <!-- Modal autorizar entrada trabajador trabajador -->
+    <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿DESEA ELIMINAR AL TRABAJADOR?</h5>
+            <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body border text-center">
+            <button type="button" class="btn btn-primary w-100" data-mdb-ripple-init data-mdb-dismiss="modal" >CANCELAR</button>
+            
+            <button type="button" class="btn btn-danger w-100 mt-3" id="confirma" data-mdb-ripple-init >CONFIRMAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal autorizar entrada trabajador trabajador -->
+
+
+
+
+
+
+
+
+
   </div>
 </div>
 
- <!-- Modal autorizar entrada trabajador trabajador -->
 
-
-
-
-
-  </div>
-</div>
-
+<!-- AQUI ESTAN TODOS LOS MODALES -->
 
 
 
