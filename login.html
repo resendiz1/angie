@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
-    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
 
@@ -58,9 +57,12 @@
     <!-- Start your project here-->
 <div class="container mt-5">
   <div class="row mt-5 justify-content-center">
-    <div class="col-5 bg-white shadow shadow-sm mt-5 border p-5 text-center">
+
+    <div class="col-5 bg-white shadow shadow-sm mt-5 border p-5 text-center sombra-filas">
       <h4 class=" text-center">Inicio de Sesión</h4>
-      <img src="img/angie.png" class="img-fluid mb-5 animate__animated animate__rubberBand" style="width: 100px; height: 100px;" alt="">
+      <img src="img/angie.png" id="logo" class="img-fluid mb-5 animate__animated " style="width: 100px; height: 100px;" alt="">
+
+
 
       <form>
         <!-- Email input -->
@@ -74,14 +76,10 @@
           <input type="password" id="form1Example2" class="form-control" />
           <label class="form-label" for="form1Example2">Contraseña</label>
         </div>
-      
-
-      
-
-      
         <!-- Submit button -->
         <button data-mdb-ripple-init type="submit" class="btn btn-danger btn-block mt-4">Entrar</button>
       </form>
+
 
 
 
@@ -92,6 +90,25 @@
 
 
 
+
+
+
+    <script>
+
+      //Codigo para que cada vez que se actualice la pagina se carge una animación nueva
+      const animaciones = ['animate__bounce', 'animate__wobble', 'animate__shakeX', 'animate__rubberBand', 'animate__shakeX', 'animate__fadeIn', 'animate__fadeInBottomRight', 'animate__fadeInLeftBig', 'animate__lightSpeedInLeft', 'animate__rotateInUpRight', 'animate__slideInDown', 'animate__slideInLeft', 'animate__slideInRight', 'animate__slideInUp', 'animate__rollIn'   ]
+
+      const aleatorio = Math.floor(Math.random() * animaciones.length)
+      const logo = document.getElementById('logo')
+
+
+        logo.classList.add(animaciones[aleatorio])
+
+      //Codigo para que cada vez que se actualice la pagina se carge una animación nueva
+  
+
+
+    </script>
 
 
 
